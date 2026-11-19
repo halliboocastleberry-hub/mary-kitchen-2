@@ -57,26 +57,26 @@
           <div id="pickup-options" class="pickup-options"></div>
         </fieldset>
         <p class="pickup-detail" id="pickup-detail" hidden></p>
-        <label class="field-label" for="guest-name">Name for your sample order</label>
+        <label class="field-label" for="guest-name">Name for your order</label>
         <input id="guest-name" placeholder="Your first name" maxlength="35" autocomplete="given-name" required>
         <label class="field-label" for="guest-phone">Mobile number for pickup</label>
         <input id="guest-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="(404) 555-0100" aria-describedby="phone-note" required>
-        <p class="contact-help" id="phone-note">Mary can text or call this number when your order is ready. Try (404) 555-0100 for a practice order.</p>
+        <p class="contact-help" id="phone-note">Mary texts or calls this number when your order is ready.</p>
         <p class="form-error" id="pickup-error" role="alert"></p>
-        <div class="plate-actions"><button class="pill submit" id="place-order" type="submit">Place sample order</button>
+        <div class="plate-actions"><button class="pill submit" id="place-order" type="submit">Place order</button>
         <button class="plate-link" id="back-to-plates" type="button">Back to plates</button></div>
       </form>
-      <p class="small demo-boundary">Practice order. Mary sets the final menu and prices before taking orders.</p>
+      <p class="small demo-boundary">Your order goes straight to Mary’s kitchen. Payment isn’t online yet; Mary confirms your total with you.</p>
       <p id="cart-status" class="sr-only" role="status"></p>
     </div>
     <aside class="plate-summary"><div class="summary-image"><img id="summary-photo" src="../assets/pasta-retouched.png" alt="A past plate from Mary’s kitchen"></div>
       <div class="summary-copy"><p class="eyebrow">YOUR ORDER</p><h3 id="summary-title">Your first plate.</h3>
         <p id="summary-detail">Choose what goes on it.</p>
-        <a class="underlink" href="kitchen.html">Explore Mary’s kitchen demo</a>
+        <a class="underlink" href="kitchen.html">Mary’s kitchen board (Mary signs in)</a>
       </div>
     </aside>
   </div>
 </section>
 </main>
 <footer><div class="footer-top"><img src="../assets/logo-clean.png" alt="Mary’s Kitchen logo"><h2>See you at the<br><em>next pop-up.</em></h2><a class="pill" href="https://www.instagram.com/marys_kitchen95/" target="_blank" rel="noopener">Keep up with Mary <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></div><div class="footer-bottom"><a href="kitchen.html">Kitchen demo <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a><span>Custom design preview · Sample orders & voting</span><a href="https://sitestyles.net" target="_blank" rel="noopener">Powered by <strong>SiteStyles</strong></a></div></footer>
-<dialog id="review-dialog" class="review-dialog" aria-label="Original food review"><button class="dialog-close" data-close="review-dialog" aria-label="Close video" type="button">×</button><video id="review-player" controls playsinline preload="none"></video></dialog><dialog id="confirmation" class="confirmation" aria-labelledby="confirmation-title"><button class="dialog-close" data-close="confirmation" aria-label="Close confirmation" type="button">×</button><p class="eyebrow">SAMPLE ORDER ADDED</p><h2 id="confirmation-title">Your plate<br><em>has a place.</em></h2><p id="confirmation-copy"></p><a class="pill" href="kitchen.html">See it in Mary’s kitchen <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a><p class="small">Demo only. Nothing was sent to Mary.</p></dialog><script src="orders.js?v=1"></script><script src="app.js?v=3"></script></body></html>
+<dialog id="review-dialog" class="review-dialog" aria-label="Original food review"><button class="dialog-close" data-close="review-dialog" aria-label="Close video" type="button">×</button><video id="review-player" controls playsinline preload="none"></video></dialog><dialog id="confirmation" class="confirmation" aria-labelledby="confirmation-title"><button class="dialog-close" data-close="confirmation" aria-label="Close confirmation" type="button">×</button><p class="eyebrow">ORDER RECEIVED</p><h2 id="confirmation-title">Your plate<br><em>has a place.</em></h2><p id="confirmation-copy"></p><a class="pill" href="./" data-close-confirm>Back to Mary’s Kitchen <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a><p class="small">Mary has your order. She’ll text you at the number you gave when it’s ready.</p></dialog><script src="orders.js?v=3"></script><script src="app.js?v=4"></script></body></html>

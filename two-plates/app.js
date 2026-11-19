@@ -1,4 +1,4 @@
-(()=>{'use strict';
+MaryOrders.boot('public', ()=>{'use strict';
 const $ = id => document.getElementById(id);
 const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
 const load = MaryOrders.read;
@@ -136,7 +136,7 @@ $('cart-lines').addEventListener('click', event => {
   if (!lines.length) openPlate(); else showCart('Plate removed.');
 });
 function platesLeft(current, slot) {
-  const reserved = current.orders.filter(order => order.slot === slot.id)
+  const reserved = (slot.booked || 0) + current.orders.filter(order => order.slot === slot.id)
     .reduce((sum, order) => sum + order.items.reduce((total,item) => total + item.qty, 0), 0);
   return Math.max(0, slot.cap - reserved);
 }
@@ -172,7 +172,7 @@ $('guest-phone').addEventListener('input', () => {
     $('pickup-error').textContent = '';
   }
 });
-pickupForm.addEventListener('submit', event => {
+pickupForm.addEventListener('submit', async event => {
   event.preventDefault();
   if (stage !== 'pickup' || !lines.length) return;
   const current = load();
@@ -191,13 +191,14 @@ pickupForm.addEventListener('submit', event => {
     renderDinnerWindows();
     return;
   }
-  const orderId = Math.max(current.nextId || 205, ...current.orders.map(order => order.id + 1));
-  const items = lines.map(line => ({ label: lineTitle(line), qty: 1, price: 0, sides: [...line.sides], drink: line.drink, dessert: line.dessert }));
-  const pickup = MaryOrders.pickupFor(slot, current.pickupDetails);
-  current.orders.push({ id: orderId, name, contact: { phone }, pickup, slot: slot.id, items, status: 'queued', waiting: 0 });
-  current.nextId = orderId+1;
-  try { MaryOrders.write(current); }
-  catch { $('pickup-error').textContent = 'This browser could not save the sample order. Your plates are still here.'; return; }
+  // Send the order to Mary's kitchen (saved on SiteStyles, shows on her board right away).
+  const items = lines.map(line => ({ base: line.base, protein: line.protein, sides: [...line.sides], drink: line.drink, dessert: line.dessert }));
+  const button = $('place-order'); button.disabled = true; const label = button.textContent; button.textContent = 'Sending to Mary…';
+  let orderId;
+  try { orderId = (await MaryOrders.placeOrder({ name, phone, slot: slot.id, items })).id; }
+  catch (err) { $('pickup-error').textContent = err.message + ' Your plates are still here.'; button.disabled = false; button.textContent = label; await MaryOrders.refresh(); renderDinnerWindows(); return; }
+  button.disabled = false; button.textContent = label;
+  MaryOrders.refresh();
   $('confirmation-copy').textContent = 'MK-' + orderId + ' · ' + name + ' · ' + lines.length + (lines.length === 1 ? ' plate' : ' plates') +
     ' · ' + slot.name + ' · ' + time(slot.start) + '–' + time(slot.end);
   lines = []; selectedWindow = ''; keepCart(); pickupForm.reset(); openPlate(null, false, false);
@@ -205,4 +206,4 @@ pickupForm.addEventListener('submit', event => {
 });
 if (lines.length) paint(); else openPlate(null, false, false);
 
-try{const v=sessionStorage.getItem('mk-demo-vote');const b=[...document.querySelectorAll('[data-vote]')].find(x=>x.dataset.vote===v);if(b)b.click()}catch{};})();
+try{const v=sessionStorage.getItem('mk-demo-vote');const b=[...document.querySelectorAll('[data-vote]')].find(x=>x.dataset.vote===v);if(b)b.click()}catch{};});
