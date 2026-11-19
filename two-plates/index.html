@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#531b2e"><title>Welcome to Mary’s Kitchen</title><meta name="description" content="Good food. Great vibes. Welcome to Mary’s pop-up kitchen."><link rel="stylesheet" href="styles.css?v=3"></head>
+<body><a class="skip" href="#food">Skip to the food</a>
+<header class="nav"><a class="wordmark" href="#home"><img src="../assets/logo-clean.png" alt="Mary’s Kitchen"><span>MARY’S<br><small>POP-UP KITCHEN</small></span></a><nav aria-label="Main navigation"><a href="#food">The food</a><a href="#reactions">The love</a><a class="nav-plate" href="#plate">Build your plate <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></nav></header>
+<main><section class="hero" id="home"><div class="cinema" aria-hidden="true"><div class="scene left"><img src="../assets/chicken-retouched.png" alt="" fetchpriority="high"></div><div class="scene center"><video id="welcome-video" src="../assets/welcome-film.mp4" poster="../assets/welcome-poster.png" autoplay muted loop playsinline webkit-playsinline preload="metadata"></video></div><div class="scene right"><img src="../assets/pasta-retouched.png" alt="" fetchpriority="high"></div></div><div class="shade"></div><p class="hero-note">GOOD FOOD.<br>GREAT VIBES.<br>ALWAYS.</p><div class="hero-title"><p class="eyebrow">WELCOME TO</p><h1>Mary’s <em>Kitchen.</em></h1><p>A little pop-up. A whole lot of flavor.</p></div><div class="hero-bottom"><a class="pill" href="#plate">Come get your plate <span><svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></a><a class="scroll-note" href="#food">SCROLL FOR THE GOOD STUFF <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M9 3v12m-5-5 5 5 5-5"/></svg></a><button id="film-toggle" class="film-button" type="button">Pause film</button></div><button id="play-welcome" class="play-fallback" type="button" hidden>Play the welcome film</button></section>
+<section class="section intro" id="food"><div class="section-top"><p class="eyebrow">STRAIGHT FROM MARY’S KITCHEN</p><span>01 / THE GOOD STUFF</span></div><div class="split-heading reveal"><h2>Different day.<br><em>Same big flavor.</em></h2><div class="intro-copy"><p>Golden, crispy, creamy, comforting.<br>Whatever Mary’s cooking, come hungry.</p><p class="small">A taste of her cooking below. The lineup changes with each pop-up.</p><a class="underlink" href="#next">See what’s coming next <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></div></div><div class="food-gallery"><figure class="food-photo one reveal"><div><img src="../assets/chicken-retouched.png" alt="Mary’s fried chicken, macaroni, broccoli and cornbread; enhanced video still" loading="lazy"></div><figcaption>GOLDEN & CRISPY <span>01</span></figcaption></figure><figure class="food-photo two reveal"><div><img src="../assets/pasta-retouched.png" alt="Mary’s steak and creamy penne pasta; enhanced video still" loading="lazy"></div><figcaption>CREAMY & LOADED <span>02</span></figcaption></figure><figure class="food-photo three reveal"><div><img src="../assets/fish-retouched.png" alt="Mary’s fried fish, green beans and macaroni; enhanced video still" loading="lazy"></div><figcaption>COMFORT ON A PLATE <span>03</span></figcaption></figure></div><p class="footnote">A look at past plates. Food photos enhanced from Mary’s uploaded footage.</p></section>
+<section class="section next" id="next"><div class="section-top"><p class="eyebrow">MARY SETS THE LINEUP. YOU BRING THE APPETITE.</p><span>02 / THE NEXT POP-UP</span></div><div class="next-layout"><div class="reveal"><h2>What’s next<br><em>in the kitchen?</em></h2><p class="next-copy">A new day. A new reason to pull up.</p><div class="day-tabs" role="tablist" aria-label="Example pop-up days"><button id="wednesday-tab" data-day="Wednesday" role="tab" aria-selected="true" aria-controls="day-panel" type="button">Wednesday <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></button><button id="thursday-tab" data-day="Thursday" role="tab" aria-selected="false" aria-controls="day-panel" type="button">Thursday <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></button></div><div id="day-panel" class="day-panel" role="tabpanel" aria-labelledby="wednesday-tab"><p class="eyebrow" id="day-kicker">WEDNESDAY · EXAMPLE DAY</p><h3 id="day-title">Menu reveal coming soon.</h3><p>Check back for the lineup, then choose your plate and pickup window. These are example pop-up days.</p><a class="underlink" href="#plate">Try the plate builder <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></div></div><div class="next-art reveal"><video id="food-video" src="../assets/opening-film.mp4" poster="../assets/chicken-retouched.png" muted loop playsinline preload="none" aria-label="Close-ups of Mary’s food"></video><button id="food-film-toggle" type="button">Watch the food close-ups</button><span class="handwritten">Made you hungry?</span></div></div><div class="vote-zone"><div><p class="eyebrow">HAVE A CRAVING?</p><h3>Give Mary a little inspiration.</h3><p class="small">What would you love to see at the next pop-up?</p></div><div class="votes" role="group" aria-label="Vote for what Mary could cook next"><button data-vote="Comfort plates" aria-pressed="false" type="button">Comfort plates <span>♡</span></button><button data-vote="Loaded pasta" aria-pressed="false" type="button">Loaded pasta <span>♡</span></button><button data-vote="Something sweet" aria-pressed="false" type="button">Something sweet <span>♡</span></button></div><p class="small vote-status" id="vote-status" role="status">Try a demo vote. Votes stay in this browser.</p></div></section>
+<section class="section reactions" id="reactions"><div class="section-top"><p class="eyebrow">DON’T JUST TAKE OUR WORD FOR IT</p><span>03 / REAL REACTIONS</span></div><div class="split-heading reveal"><h2>Good food.<br><em>Real reactions.</em></h2><div class="reaction-aside"><p>Press play. Catch the first bite.<br>Let the people tell it.</p><div class="arrows"><button id="prev-reel" aria-label="Previous reaction" type="button">←</button><button id="next-reel" aria-label="Next reaction" type="button">→</button></div></div></div><div class="reaction-track" id="reaction-track"><button class="reaction-card" data-clip="review-original" aria-label="Play the first food review" type="button"><img src="../assets/reaction-one.png" alt="Reviewer holding a plate from Mary’s Kitchen" loading="lazy"><span class="play-circle" aria-hidden="true"></span><span class="caption"><small>THE FIRST-BITE REVIEW</small><strong>A plate worth<br>talking about.</strong><span>Watch the original clip <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></span></button><button class="reaction-card" data-clip="car-reaction-original" aria-label="Play the pickup reaction" type="button"><img src="../assets/reaction-two.png" alt="Customer trying a plate in a car" loading="lazy"><span class="play-circle" aria-hidden="true"></span><span class="caption"><small>THE PICKUP REACTION</small><strong>That first<br>good bite.</strong><span>Watch the original clip <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></span></button><button class="reaction-card" data-clip="review-second-original" aria-label="Play another food review" type="button"><img src="../assets/reaction-three.png" alt="A moment from another uploaded food review" loading="lazy"><span class="play-circle" aria-hidden="true"></span><span class="caption"><small>MORE FOOD. MORE LOVE.</small><strong>Come hungry.<br>Leave happy.</strong><span>Watch the original clip <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></span></span></button></div></section>
+<section class="section plate" id="plate">
+  <div class="section-top"><p class="eyebrow">YOUR PLATE. YOUR WAY.</p><span>04 / BUILD YOUR PLATE</span></div>
+  <div class="split-heading reveal">
+    <h2>Let’s make it<br><em>your kind of plate.</em></h2>
+    <p class="builder-note">Choose two sides for each plate, add a drink or dessert, then pick one dinner window for your whole order.</p>
+  </div>
+  <div class="builder">
+    <div class="plate-workspace">
+      <form id="plate-form">
+        <h3 id="plate-heading" tabindex="-1">Build plate 1</h3>
+        <fieldset><legend>Choose your plate</legend>
+          <div class="choice-row">
+            <label class="image-choice"><input type="radio" name="base" value="pasta" checked><img src="../assets/pasta-retouched.png" alt=""><span>Rasta pasta</span></label>
+            <label class="image-choice"><input type="radio" name="base" value="comfort"><img src="../assets/chicken-retouched.png" alt=""><span>Comfort plate</span></label>
+          </div>
+          <label class="field-label" for="protein">Protein</label><select id="protein" name="protein"></select>
+        </fieldset>
+        <fieldset id="side-options"><legend>Choose two sides</legend>
+          <div class="side-choices">
+            <label><input type="checkbox" name="sides" value="Mac &amp; cheese">Mac &amp; cheese</label>
+            <label><input type="checkbox" name="sides" value="Green beans">Green beans</label>
+            <label><input type="checkbox" name="sides" value="Broccoli">Broccoli</label>
+            <label><input type="checkbox" name="sides" value="Cornbread">Cornbread</label>
+          </div>
+          <p class="side-count" id="side-count" aria-live="polite">0 of 2 selected</p>
+        </fieldset>
+        <div class="plate-extras">
+          <label class="field-label">Drink<select name="drink" id="plate-drink">
+            <option>No drink</option><option>Lemonade</option><option>Strawberry lemonade</option><option>Sweet tea</option>
+          </select></label>
+          <label class="field-label">Dessert<select name="dessert" id="plate-dessert">
+            <option>No dessert</option><option>Strawberry crunch cake slice</option><option>Chocolate yellow cake slice</option>
+          </select></label>
+        </div>
+        <p class="form-error" id="plate-error" role="alert"></p>
+        <div class="plate-actions"><button class="pill submit" id="save-plate" type="submit">Add plate to order</button>
+        <button class="plate-link" id="cancel-plate" type="button" hidden>Cancel changes</button></div>
+      </form>
+      <section id="order-cart" class="order-cart" aria-labelledby="cart-heading" hidden>
+        <h3 id="cart-heading" tabindex="-1">Your plates</h3>
+        <ol id="cart-lines"></ol>
+        <div class="plate-actions" id="cart-actions">
+          <button class="pill submit" id="go-pickup" type="button">Choose dinner window</button>
+          <button class="plate-link" id="new-plate" type="button">Build a different plate</button>
+        </div>
+      </section>
+      <form id="pickup-form" hidden>
+        <fieldset><legend id="pickup-heading" tabindex="-1">Choose your dinner window</legend>
+          <div id="pickup-options" class="pickup-options"></div>
+        </fieldset>
+        <p class="pickup-detail" id="pickup-detail" hidden></p>
+        <label class="field-label" for="guest-name">Name for your sample order</label>
+        <input id="guest-name" placeholder="Your first name" maxlength="35" autocomplete="given-name" required>
+        <label class="field-label" for="guest-phone">Mobile number for pickup</label>
+        <input id="guest-phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" maxlength="30" placeholder="(404) 555-0100" aria-describedby="phone-note" required>
+        <p class="contact-help" id="phone-note">Mary can text or call this number when your order is ready. Try (404) 555-0100 for a practice order.</p>
+        <p class="form-error" id="pickup-error" role="alert"></p>
+        <div class="plate-actions"><button class="pill submit" id="place-order" type="submit">Place sample order</button>
+        <button class="plate-link" id="back-to-plates" type="button">Back to plates</button></div>
+      </form>
+      <p class="small demo-boundary">Practice order. Mary sets the final menu and prices before taking orders.</p>
+      <p id="cart-status" class="sr-only" role="status"></p>
+    </div>
+    <aside class="plate-summary"><div class="summary-image"><img id="summary-photo" src="../assets/pasta-retouched.png" alt="A past plate from Mary’s kitchen"></div>
+      <div class="summary-copy"><p class="eyebrow">YOUR ORDER</p><h3 id="summary-title">Your first plate.</h3>
+        <p id="summary-detail">Choose what goes on it.</p>
+        <a class="underlink" href="kitchen.html">Explore Mary’s kitchen demo</a>
+      </div>
+    </aside>
+  </div>
+</section>
+</main>
+<footer><div class="footer-top"><img src="../assets/logo-clean.png" alt="Mary’s Kitchen logo"><h2>See you at the<br><em>next pop-up.</em></h2><a class="pill" href="https://www.instagram.com/marys_kitchen95/" target="_blank" rel="noopener">Keep up with Mary <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a></div><div class="footer-bottom"><a href="kitchen.html">Kitchen demo <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a><span>Custom design preview · Sample orders & voting</span><a href="https://sitestyles.net" target="_blank" rel="noopener">Powered by <strong>SiteStyles</strong></a></div></footer>
+<dialog id="review-dialog" class="review-dialog" aria-label="Original food review"><button class="dialog-close" data-close="review-dialog" aria-label="Close video" type="button">×</button><video id="review-player" controls playsinline preload="none"></video></dialog><dialog id="confirmation" class="confirmation" aria-labelledby="confirmation-title"><button class="dialog-close" data-close="confirmation" aria-label="Close confirmation" type="button">×</button><p class="eyebrow">SAMPLE ORDER ADDED</p><h2 id="confirmation-title">Your plate<br><em>has a place.</em></h2><p id="confirmation-copy"></p><a class="pill" href="kitchen.html">See it in Mary’s kitchen <svg class="icon" viewBox="0 0 18 18" aria-hidden="true"><path d="M4 14 14 4M4 4h10v10"/></svg></a><p class="small">Demo only. Nothing was sent to Mary.</p></dialog><script src="orders.js?v=1"></script><script src="app.js?v=3"></script></body></html>
